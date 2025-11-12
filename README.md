@@ -1,5 +1,4 @@
 # Iris Classifier (Decision Tree)
-# new# Iris Classifier (Decision Tree)
 
 ## Overview
 End‑to‑end ML example from Digital Marketing Mastery Module → builds a decision‑tree classifier on the classic Iris dataset using scikit‑learn.
