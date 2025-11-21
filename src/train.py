@@ -1,5 +1,6 @@
 #Imports
 import argparse
+import joblib
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -58,6 +59,10 @@ def main(test_size: float = 0.20, random_state: int = 42, max_depth: int | None 
     #Check for accuracy
     accuracy = accuracy_score(y_test, y_pred)
     print("Accuracy:", round(accuracy, 3))
+
+    #Export trained model
+    joblib.dump(model, "outputs/model.joblib")
+    print("Saved trained model to outputs/model.joblib")
 
     #Confusion matrix
     Path("outputs").mkdir(parents=True, exist_ok=True)
